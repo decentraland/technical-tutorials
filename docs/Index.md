@@ -1,3 +1,3 @@
 ## Technical Tutorials
 
-- [Example](tutorials/tutorial1.md)
+- [Start your own Decentraland Node](tutorials/catalyst-node.md)
