@@ -13,10 +13,14 @@ What problem does this article helps solve?
 
 2. Add [gists](https://gist.github.com/) with code snippets or required configurations to ease the execution of the tutorial. Remember to add formatting and folder structure where files belong and make the code as digestible as possible. 
 
-
 3. Know your audience, try to avoid acronyms and add links to glossaries or referenced concepts so that people can drill down if needed. 
 
 4. Conclusion: close up the learning and what you have covered. 
+
+5. The focus of the tutorial should be “how do I accomplish X”, the main content should all be actionable and to the point. Don’t go off on tangents explaining everything. 
+
+7. Any useful clarifications can be made as notes. Notes are great to add optional content that gives context but that users can ignore if they’re in a hurry. It should be easy to tell notes appart from the required reading.
+
 
 Check some other technical writing guidance, Amazon has some good [Blogposts and tips](https://www.inc.com/jeff-haden/how-does-a-company-worth-over-1-trillion-teach-its-employees-to-communicate-5-ways-to-write-like-amazon.html) to help you improve your writing. 
 
