@@ -13,7 +13,7 @@ What problem does this article helps solve?
 
 2. Add [gists](https://gist.github.com/) with code snippets or required configurations to ease the execution of the tutorial. Remember to add formatting and folder structure where files belong and make the code as digestible as possible. Remember, instead of doing what's easy for you, do what's easy for your reader.  
 
-3. Know your audience, try to avoid acronyms and add links to glossaries or referenced concepts so that people can drill down if needed. 
+3. Know your audience, try to avoid acronyms and add links to glossaries or referenced concepts so that people can drill down if needed. Always use the clearest, simplest language that will do the job. 
 
 4. Conclusion: close up the learning and what you have covered. 
 
