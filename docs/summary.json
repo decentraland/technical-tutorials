@@ -1,18 +1,13 @@
 {
     "contributor": [
-      {
-        "name": "Tutorials",
-        "children": [
-          {
-            "name": "Documentation",
+        {
+            "name": "Tutorials",
             "children": [
-              {
-                "name": "Technical Tutorials",
-                "slug": "/contributor/tutorials"
-              }
+                {
+                    "name": "Index",
+                    "slug": "/contributor/tutorials"
+                }
             ]
-          }
-        ]
-      }
+        }
     ]
-  }
+}
