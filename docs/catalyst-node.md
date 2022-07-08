@@ -1,5 +1,5 @@
 ---
-title: "How to: run a Catalyst node"
+title: "How to run your own DCL Node"
 slug: "/contributor/tutorials/how-to-run-a-catalyst"
 ---
 
