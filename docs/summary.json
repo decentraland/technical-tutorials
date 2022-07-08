@@ -2,12 +2,7 @@
     "contributor": [
         {
             "name": "Tutorials",
-            "children": [
-                {
-                    "name": "Index",
-                    "slug": "/contributor/tutorials"
-                }
-            ]
+            "slug": "/contributor/tutorials"
         }
     ]
 }
