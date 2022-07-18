@@ -71,10 +71,9 @@ There is a variable called `CONTENT_SERVER_STORAGE` that defines the local folde
 > mkdir storage
 ```
 
-<aside>
-💡 For a more exhaustive list of supported environment variables please have a look at the [Environment variables](https://www.notion.so/Environment-variables-b83dc993bf114f218bf893c0db4a5639) section below.
+There is another interesting variable `SYNC_IGNORED_ENTITY_TYPES` which allows ignoring certain entity types during the synchronization process. If you are going to use the Catalyst server for development, perhaps you don't need all content type to be synchronized. You can set env var `SYNC_IGNORED_ENTITY_TYPES="profile,store"` so that only scenes and wearables will be brought from the DAO servers. This will save a lot of time, bandwidth and disk storage in your server.
 
-</aside>
+>💡 For a more exhaustive list of supported environment variables please have a look at the [Environment variables](https://www.notion.so/Environment-variables-b83dc993bf114f218bf893c0db4a5639) section below.
 
 Once all environment variables have been set up, it is time to start the node. That should be as easy as running the `init.sh` script in the root folder.
 
@@ -156,12 +155,51 @@ We can check the content server logs with this docker command:
 Even though the server is now running, it’s not 100% ready to be in business. It needs to synchronize the content from the other [servers of the DAO](https://decentraland.github.io/catalyst-monitor) so it can offer the same experience to users connected to it. Synchronization can take a long time. On a good internet connection, 6 hours should be pretty common. So… time to have a coffee, a nap, a good night's rest, and come back tomorrow.
 
 One way of knowing whether synchronization is complete consists of checking the results of the content status endpoint: [http://localhost/content/status](http://localhost/content/status) (use your URL here).
-
-![Bootstrapping status](tutorials/imgs/status-bootstrapping.png)
+```json
+{
+  "synchronizationStatus": {
+    "lastSyncWithDAO": 1658153514917,
+    "synchronizationState": "Bootstrapping"
+  },
+  "snapshot": {
+    "entities": {
+      "profile": 1271331,
+      "scene": 23477,
+      "wearable": 17351,
+      "store": 890
+    },
+    "lastUpdatedTime": 1658153414530
+  },
+  "version": "v3",
+  "commitHash": "9a2e0d5d05d02646df2e1e5d00436d3166a07aa1",
+  "catalystVersion": "4.8.6",
+  "ethNetwork": "mainnet"
+}
+```
 
 While `synchronizationState` is `Bootstrapping`, you can use the node for deploying new content, but it is still not up-to-date with other nodes from the DAO. Once the status changes to `Syncing` it means it has already caught up and is continuously receiving the latest updates. This is the healthy state in which the node is fully working.
 
-![Syncing Status](tutorials/imgs/status-syncing.png)
+```json
+{
+  "synchronizationStatus": {
+    "lastSyncWithDAO": 1658153872301,
+    "synchronizationState": "Syncing"
+  },
+  "snapshot": {
+    "entities": {
+      "profile": 1271317,
+      "scene": 23477,
+      "store": 890,
+      "wearable": 17350
+    },
+    "lastUpdatedTime": 1658152050030
+  },
+  "version": "v3",
+  "commitHash": "9a2e0d5d05d02646df2e1e5d00436d3166a07aa1",
+  "catalystVersion": "4.8.6",
+  "ethNetwork": "mainnet"
+}
+```
 
 If you are more of cli-kind-of-guy, you can grep the content server docker image logs for this message: `Starting to sync entities from servers pointer changes`. Once you see that text, the content server is fully synchronized and ready for full use.
 
