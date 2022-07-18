@@ -3,8 +3,6 @@ title: "How to run your own DCL Node"
 slug: "/contributor/tutorials/how-to-run-a-catalyst"
 ---
 
-# How to run your own DCL Node
-
 Ever felt curious about how Decentraland Catalyst nodes work? Ever wanted to run your own node and felt overwhelmed about where to start? Are you building content for Decentraland and finding it hard to do the whole development and testing cycles on production servers?
 
 If you are (or have been there), fear no more. This tutorial will help you in the process of planning, figuring out what you need to decide and then guide you step by step in starting up the server. Also, in case something might not go according to the plan, there is a troubleshooting section at the end with a few of the most common problems and how to fix them.
