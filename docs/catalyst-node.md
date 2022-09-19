@@ -261,7 +261,7 @@ One of the main reasons for willing to have your own private development environ
 
 This node is not part of the DAO, it’s just your own node for your own purposes. It will pull new content continuously from the other servers in the DAO, but the content you deploy locally will never be pushed to the DAO-approved nodes. So it works as a sandbox where nothing you do here can really harm or affect anything for Decentraland users.
 
-In order to use it for this purpose, you deploy a node and perhaps use it with validations disabled. This way you can deploy your scene in any parcel (no need to be owner), then you can explore the world in order to test the new scene, share it with your QA team or a selected group of users.
+In order to use it for this purpose, you deploy a node and perhaps use it with ownership validations disabled, to do this you just need to add the property `IGNORE_BLOCKCHAIN_ACCESS_CHECKS=true` to your `.env` file. This way you can deploy your scene in any parcel (no need to be owner), then you can explore the world in order to test the new scene, share it with your QA team or a selected group of users.
 
 For testing your new scene, you can enter explorer by specifying the URL for your Catalyst node. For e.g.
 
