@@ -6,6 +6,10 @@
                 {
                     "name": "Run a DCL Node",
                     "slug": "/contributor/tutorials/how-to-run-a-catalyst"
+                },
+                {
+                    "name": "Create a new Entity",
+                    "slug": "contributor/tutorials/how-to-create-an-entity"
                 }
             ]
         }
