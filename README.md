@@ -1,3 +1,11 @@
+
+# Migrated repo 
+
+This content has been moved to the documentation repo https://github.com/decentraland/documentation 
+
+
+
+
 # Technical Tutorials
 
 The goal of this repository is to feed the [Technical Documentation site](https://tech-docs.decentraland.org/contributor/) with technical tutorials on various subjects related to the Decentraland Platform and Protocol to help the community understand how things work and build new projects on top of it. 
